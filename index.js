@@ -45,9 +45,7 @@ ${githubuser}<br>
 ## Tests
 ${test}
 `
-
 };
-
 
 inquirer.prompt([
     {
