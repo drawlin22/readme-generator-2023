@@ -148,7 +148,7 @@ inquirer.prompt([ /* user questions */
       break;
   }
   
-  const readmeContent = generateReadme(
+  const readmeContent = generateReadme( /* Generates the content fo the readme from user respones */
     response.title, 
     response.motivation,
     response.why,
@@ -164,7 +164,7 @@ inquirer.prompt([ /* user questions */
     response.email
   );
 
-  fs.writeFile("Generatedreadme.md", readmeContent, (err) =>
+  fs.writeFile("Generatedreadme.md", readmeContent, (err) => /* writes the generated content to new file */
   err ? console.error(err) : console.log ("Readme Built!"));
 })
 
