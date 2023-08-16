@@ -2,7 +2,7 @@ const inquirer = require('inquirer'); /* requires inquirer */
 const fs = require('fs'); /* requires file syste */
 let badge = "";
 
-const generateReadme = (title, motivation, why, problem, learn, steps, instruction, screenshot, license, contributors, githubuser, githuburl, email) => {
+const generateReadme = (title, motivation, why, problem, learn, steps, instruction, screenshot, license, contributors, githubuser, githuburl, email, test) => {
 return /* temporal literal for readme.md */ ` 
 
 ${title} 
@@ -12,7 +12,7 @@ ${title}
 ## Description
 My Motivation: ${motivation} <br>
 My Purpose: ${why} <br>
-The Problem: ${problem}<br>
+The Solved Problem: ${problem}<br>
 What I learned: ${learn}
 
 ## Table of Contents
@@ -161,7 +161,8 @@ inquirer.prompt([ /* user questions */
     response.contributors,
     response.githubuser, 
     response.githuburl,
-    response.email
+    response.email,
+    response.test
   );
 
   fs.writeFile("Generatedreadme.md", readmeContent, (err) => /* writes the generated content to new file */

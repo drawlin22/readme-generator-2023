@@ -2,7 +2,7 @@
 
 Readme Generator
 
-Description: This project was to create a readme generator that takes user input to create a professional readmefile.
+Description: This project was to create a readme generator that takes user input to create a professional readmefile. Multiple responses are collected from the user to fill in a temperal literal that writes to a new readme.md file.
 
 Installation: 
 
