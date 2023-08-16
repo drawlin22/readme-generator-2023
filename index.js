@@ -1,9 +1,9 @@
-const inquirer = require('inquirer');
-const fs = require('fs');
+const inquirer = require('inquirer'); /* requires inquirer */
+const fs = require('fs'); /* requires file syste */
 let badge = "";
 
 const generateReadme = (title, motivation, why, problem, learn, steps, instruction, screenshot, license, contributors, githubuser, githuburl, email) => {
-return `
+return /* temporal literal for readme.md */ ` 
 
 ${title} 
 
@@ -47,7 +47,7 @@ ${test}
 `
 };
 
-inquirer.prompt([
+inquirer.prompt([ /* user questions */
     {
       type: 'input',
       message: 'What is your project title?',
@@ -120,7 +120,7 @@ inquirer.prompt([
          name: 'test',
        }
 ])
-.then((response) => {
+.then((response) => { /* selection of badge license parameter */
   switch (response.license) {
     case "Apache License 2.0":
       badge = "License-Apache%202.0-blue"
